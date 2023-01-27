@@ -46,7 +46,7 @@ class telaloginadm:
         senha=self.entradasenha.get()
         if nome=="Diego" and senha=="12345":
             self.testelogin["text"]=("Você logou...")
-            telaadm()
+            telaadm
         else:
             self.testelogin["text"]=("Erro!")
 

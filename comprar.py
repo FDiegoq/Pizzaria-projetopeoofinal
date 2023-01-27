@@ -3,7 +3,7 @@ class comprar:
     def __init__(self):
         
         self.pizzas=[
-        ["Pizza de carne-R$",35],
+        ["Pizza de carne-R$",33],
         ["Pizza de Queijo-R$",32],
         ["Pizza de Frango-R$",34],
         ["Pizza de Calabresa-R$",30],
