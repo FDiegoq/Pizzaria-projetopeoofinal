@@ -1,5 +1,4 @@
 from tkinter import*
-from telaadm import*
 from comprar import*
 from telalogin import*
 class janela:
@@ -20,10 +19,10 @@ class janela:
         self.comprar["command"]= telalogin
         self.comprar.pack()
 
-        self.botao_abriradm=Button(self.tela,text="ABRIR PAINEL DE ADMINISTRADOR",background="#B50011",foreground="white")
+        self.botao_abriradm=Button(self.tela,text="ADICIONAR PIZZA AO CARDÁPIO",background="#B50011",foreground="white")
         self.botao_abriradm["font"]=("Times new Roman","10","bold")
         self.botao_abriradm.config(width=100)
-        self.botao_abriradm["command"]= telaadm
+        self.botao_abriradm["command"]
         self.botao_abriradm.pack()
 
         self.botao_fechar=Button(self.tela,text="FECHAR",background="#90A74C",foreground="white")
@@ -31,7 +30,6 @@ class janela:
         self.botao_fechar.config(width=100)
         self.botao_fechar["command"]= janelinha.destroy
         self.botao_fechar.pack()
-
 
 janelinha=Tk()
 janela(janelinha)

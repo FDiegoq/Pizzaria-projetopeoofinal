@@ -1,1 +1,0 @@
-["(1).Pizza de carne-R$ 33","(2).Pizza de Queijo-R$ 32","(3).Pizza de Frango-R$ 34","(4).Pizza de Calabresa-R$ 30","(5).Pizza Americana-R$ 32","(6).Pizza de Chocolate-R$ 30"]
