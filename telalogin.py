@@ -1,6 +1,6 @@
 from tkinter import*
-from telaadm import*
-class telaloginadm:
+from comprar import*
+class telalogin:
     def __init__(self):
 
         self.tela=Toplevel(background="#781F25")
@@ -22,7 +22,7 @@ class telaloginadm:
         self.nome["font"]=("Times new Roman","10","bold")
         self.nome.pack()
 
-        self.entradasenha=Entry(self.tela)
+        self.entradasenha=Entry(self.tela,show="*")
         self.entradasenha.pack()
 
         self.botaologin=Button(self.tela,text="ENTRAR",background="#B50011",foreground="white")
@@ -46,7 +46,7 @@ class telaloginadm:
         senha=self.entradasenha.get()
         if nome=="Diego" and senha=="12345":
             self.testelogin["text"]=("Você logou...")
-            telaadm
+            comprar()
         else:
             self.testelogin["text"]=("Erro!")
 
