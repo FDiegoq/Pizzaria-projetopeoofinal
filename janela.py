@@ -1,5 +1,6 @@
 from tkinter import*
 from comprar import*
+from telaadm import*
 from telalogin import*
 class janela:
     def __init__(self,master):
@@ -22,7 +23,7 @@ class janela:
         self.botao_abriradm=Button(self.tela,text="ADICIONAR PIZZA AO CARDÁPIO",background="#B50011",foreground="white")
         self.botao_abriradm["font"]=("Times new Roman","10","bold")
         self.botao_abriradm.config(width=100)
-        self.botao_abriradm["command"]
+        self.botao_abriradm["command"]= telaadm
         self.botao_abriradm.pack()
 
         self.botao_fechar=Button(self.tela,text="FECHAR",background="#90A74C",foreground="white")
