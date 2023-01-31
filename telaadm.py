@@ -45,7 +45,7 @@ class telaadm:
         self.textcaixa=Label(self.tela,text="Tipo da pizza:",background="#781F25",foreground="white")
         self.textcaixa["font"]=("Times new Roman", "15","bold")
 
-        self.caixa=ttk.Combobox(self.tela,values=self.tipos)
+        self.caixa=ttk.Combobox(self.tela,values=self.tipos,width=45)
         self.caixa.pack()
 
         self.deletepizza=Button(self.tela,text="CARREGAR CARDÁPIO",background="#B50011",foreground="white")
@@ -77,6 +77,7 @@ class telaadm:
         self.mensagem1.pack()
 
     def apagarpizza(self):
+
       selecao = self.tabela.selection()[0]
       self.tabela.delete(selecao)
       arq= open("cardapio.txt", "wb")
@@ -85,6 +86,7 @@ class telaadm:
       arq.close()
   
     def carregarcardapio(self):
+
         pizzas = []
         arq = open("cardapio.txt", "rb")
         pizzas = load(arq)
@@ -100,12 +102,14 @@ class telaadm:
            preco=self.entradaprecopizza.get()
 
            p=pizza(sabor,preco)
-           self.tabela.insert('', 'end', values=(sabor,preco))
+           self.tabela.insert('', 'end', values=(sabor,"R$ {0}".format(preco)))
 
            arq=open("cardapio.txt","ab")
            dump(p,arq)
            arq.close()
+
            self.mensagem1["text"]=("Você cadastrou uma pizza comum!")
+
            cardapio=[self.tabela.item(x)['values'] for x in self.tabela.get_children()]
            arq= open("cardapio.txt", "wb")
            dump(cardapio,arq)
@@ -116,16 +120,18 @@ class telaadm:
            sabor=self.entradanovapizzas.get()
            preco=self.entradaprecopizza.get()
 
-           p=pizzadoce(sabor,preco)
+           p=pizzadoce(sabor,preco,chocolate=True)
            self.tabela.insert('', 'end', values=(sabor,preco))
 
            arq=open("cardapio.txt","ab")
            dump(p,arq)
            arq.close()
+           
            self.mensagem1["text"]=("Você cadastrou uma pizza Doce")
+
            cardapio=[self.tabela.item(x)['values'] for x in self.tabela.get_children()]
            arq= open("cardapio.txt", "wb")
            dump(cardapio,arq)
            arq.close()
-
-        ##Erro ao adicionar pizza doce
+        
+          ##Erro ao adicionar pizza do tipo doce

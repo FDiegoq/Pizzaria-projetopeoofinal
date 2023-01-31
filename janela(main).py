@@ -1,4 +1,5 @@
 from tkinter import*
+from pickle import*
 from comprar import*
 from telaadm import*
 from telalogin import*

@@ -1,6 +1,7 @@
 from tkinter import*
 from tkinter import ttk
 from pickle import*
+
 class comprar:
     def __init__(self):
         
@@ -28,7 +29,7 @@ class comprar:
         self.botao_comprar=Button(self.tela,text="COMPRAR",background="#B50011",foreground="white")
         self.botao_comprar["font"]=("Times new Roman","10","bold")
         self.botao_comprar.config(width=40)
-        self.botao_comprar["command"]#self.comprar
+        self.botao_comprar["command"]=self.comprar
         self.botao_comprar.pack()
 
         self.botao_fechar=Button(self.tela,text="FECHAR",background="#90A74C",foreground="white")
@@ -38,6 +39,7 @@ class comprar:
         self.botao_fechar.pack()
 
     def carregarcardapio(self):
+        
        pizzas = []
        arq = open("cardapio.txt", "rb")
        pizzas = load(arq)
@@ -45,5 +47,21 @@ class comprar:
        for item in pizzas:
          self.tabela.insert('','end',values=item)
 
-    #Fazer botao de comprar pizza
+    def comprar(self):
+
+        mensagem=Label(self.tela,text="Item comprado!",background="#781F25",foreground="white")
+        mensagem["font"]=("Times new Roman", "10","italic","bold")
+        mensagem.pack()
+       #selecao = self.tabela.selection()[0]
+       #arq = open("cardapio.txt", "rb")
+      # load(arq)
+      # if selecao in arq:
+       #  arq2=open("pedidos.txt","w")
+       #  arq2.write(selecao)
+      # else:
+        #    print("ERROR")
+         
+         
+
+
 

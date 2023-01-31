@@ -1,5 +1,6 @@
 from tkinter import*
 from telaadm import*
+
 class telalogin:
     def __init__(self):
 
@@ -50,18 +51,26 @@ class telalogin:
         self.testelogin.pack()
 
     def cadastrar(self):
+
         self.usuarios.append(self.entradanome.get())
         self.usuarios.append(self.entradasenha.get())
         self.usuarios.append(" ")
+
         strusuarios=" ".join(self.usuarios)
+
         arq=open("usuarios.txt","a")
         arq.write(strusuarios)
         arq.close()
+
         self.testelogin["text"]=("Você cadastrou um usuário")
+
     def entrar(self):
+
         if self.entradanome.get() in self.usuarios and self.entradasenha.get() in self.usuarios:
             self.testelogin["text"]=("Você logou!")
             telaadm()
+
         else:
+
             self.testelogin["text"]=("Erro!")
 
