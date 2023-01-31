@@ -1,5 +1,5 @@
 from tkinter import*
-from comprar import*
+from telaadm import*
 class telalogin:
     def __init__(self):
 
@@ -61,7 +61,7 @@ class telalogin:
     def entrar(self):
         if self.entradanome.get() in self.usuarios and self.entradasenha.get() in self.usuarios:
             self.testelogin["text"]=("Você logou!")
-            comprar()
+            telaadm()
         else:
             self.testelogin["text"]=("Erro!")
 

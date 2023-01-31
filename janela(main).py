@@ -17,13 +17,13 @@ class janela:
         self.comprar=Button(self.tela,text="COMPRAR",background="#B50011",foreground="white")
         self.comprar["font"]=("Times new Roman","10","bold")
         self.comprar.config(width=100)
-        self.comprar["command"]= telalogin
+        self.comprar["command"]= comprar
         self.comprar.pack()
 
         self.botao_abriradm=Button(self.tela,text="ADICIONAR PIZZA AO CARDÁPIO",background="#B50011",foreground="white")
         self.botao_abriradm["font"]=("Times new Roman","10","bold")
         self.botao_abriradm.config(width=100)
-        self.botao_abriradm["command"]= telaadm
+        self.botao_abriradm["command"]= telalogin
         self.botao_abriradm.pack()
 
         self.botao_fechar=Button(self.tela,text="FECHAR",background="#90A74C",foreground="white")

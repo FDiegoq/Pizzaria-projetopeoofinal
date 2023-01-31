@@ -19,7 +19,11 @@ class comprar:
         self.tabela.heading("# 2", text="Preço")
         self.tabela.pack()
 
-
+        self.botao_carregar=Button(self.tela,text="CARREGAR CARDÁPIO",background="#B50011",foreground="white")
+        self.botao_carregar["font"]=("Times new Roman","10","bold")
+        self.botao_carregar.config(width=40)
+        self.botao_carregar["command"]= self.carregarcardapio
+        self.botao_carregar.pack()
 
         self.botao_comprar=Button(self.tela,text="COMPRAR",background="#B50011",foreground="white")
         self.botao_comprar["font"]=("Times new Roman","10","bold")
@@ -33,8 +37,13 @@ class comprar:
         self.botao_fechar["command"]= self.tela.destroy
         self.botao_fechar.pack()
 
+    def carregarcardapio(self):
+       pizzas = []
+       arq = open("cardapio.txt", "rb")
+       pizzas = load(arq)
+       arq.close()
+       for item in pizzas:
+         self.tabela.insert('','end',values=item)
 
+    #Fazer botao de comprar pizza
 
-        #self.mensagem=Label(self.tela,text="",background="#781F25",foreground="white")
-        #self.mensagem["font"]=("Times new Roman","18","bold")
-        #self.mensagem.pack()
