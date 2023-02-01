@@ -121,7 +121,7 @@ class telaadm:
            preco=self.entradaprecopizza.get()
 
            p=pizzadoce(sabor,preco,chocolate=True)
-           self.tabela.insert('', 'end', values=(sabor,preco))
+           self.tabela.insert('', 'end', values=(sabor,"R$ {0}".format(preco)))
 
            arq=open("cardapio.txt","ab")
            dump(p,arq)
