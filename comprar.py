@@ -39,7 +39,7 @@ class comprar:
         self.botao_fechar.pack()
 
     def carregarcardapio(self):
-        
+      
        pizzas = []
        arq = open("cardapio.txt", "rb")
        pizzas = load(arq)
@@ -52,14 +52,6 @@ class comprar:
         mensagem=Label(self.tela,text="Item comprado!",background="#781F25",foreground="white")
         mensagem["font"]=("Times new Roman", "10","italic","bold")
         mensagem.pack()
-       #selecao = self.tabela.selection()[0]
-       #arq = open("cardapio.txt", "rb")
-      # load(arq)
-      # if selecao in arq:
-       #  arq2=open("pedidos.txt","w")
-       #  arq2.write(selecao)
-      # else:
-        #    print("ERROR")
          
          
 

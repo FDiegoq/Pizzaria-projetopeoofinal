@@ -3,6 +3,7 @@ from pickle import*
 from comprar import*
 from telaadm import*
 from telalogin import*
+
 class janela:
     def __init__(self,master):
 

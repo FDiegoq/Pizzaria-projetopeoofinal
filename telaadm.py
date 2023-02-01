@@ -133,5 +133,3 @@ class telaadm:
            arq= open("cardapio.txt", "wb")
            dump(cardapio,arq)
            arq.close()
-        
-          ##Erro ao adicionar pizza do tipo doce
